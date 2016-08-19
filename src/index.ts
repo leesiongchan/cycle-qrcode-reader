@@ -1,11 +1,11 @@
 import 'webrtc-adapter';
 
-import QrCode from 'qrcode-reader';
+import * as QrCode from 'qrcode-reader';
 import flattenConcurrently from 'xstream/extra/flattenConcurrently';
 import xs, { MemoryStream, Stream } from 'xstream';
 import { StreamAdapter } from '@cycle/base';
 
-const qr = new QrCode();
+const qrCode = new QrCode();
 
 const MEDIA_STREAM_CONSTRAINTS: MediaStreamConstraints = {
   audio: false,
@@ -21,8 +21,8 @@ export interface QrCodeReaderSource {
 function decodeQrCode$(data: ImageData): Stream<string> {
   return xs.create<string>({
     start: listener => {
-      qr.decode(data);
-      qr.callback = (result, err) => {
+      qrCode.decode(data);
+      qrCode.callback = (result, err) => {
         if (err) {
           listener.error(err);
         } else if (result) {

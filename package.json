@@ -1,6 +1,6 @@
 {
   "name": "cycle-qrcode-reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Cycle.js Driver for QR Code scanning.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
