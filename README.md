@@ -21,7 +21,7 @@ function main(sources) {
 }
 
 const drivers = {
-  QrCodeReader: makeQrCodeReaderDriver()
+  QrCodeReader: makeQrCodeReaderDriver(),
 }
 
 Cycle.run(main, drivers);
@@ -51,17 +51,17 @@ function main({ DOM, QrCodeReader }) {
 
 - [`makeQrCodeReaderDriver`](#makeQrCodeReaderDriver)
 
-### <a id="makeQrCodeReaderDriver"></a> `makeHTTPDriver()`
+### <a id="makeQrCodeReaderDriver"></a> `makeQrCodeReaderDriver()`
 
-** Arguments **
+**Arguments**
 
 - {HTMLVideoElement} videoEl
 
-** Returns **
+**Returns**
 
 - {[MediaStream](https://developer.mozilla.org/en/docs/Web/API/MediaStream)} mediaStream
 - {string} result
 
 ## Important
 
-It is important to note that ** video must consists of both height and width ** in order for the driver work properly as the driver is leveraging on the height and width to create a canvas and pass to the QR code reader to decode.
+It is important to note that **video must consists of both height and width** in order for the driver work properly as the driver is leveraging on the height and width to create a canvas and pass to the QR code reader to decode.
