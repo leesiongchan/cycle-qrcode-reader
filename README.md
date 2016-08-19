@@ -5,7 +5,7 @@ A [Cycle.js](http://cycle.js.org) [Driver](http://cycle.js.org/drivers.html) for
 It leverages on the media stream captured by the camera and outputs the result repeatedly.
 
 ```
-$ npm install --save cycle-qrcode-reader
+$ npm install --save @leesiongchan/cycle-qrcode-reader
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Basics:
 
 ```js
 import Cycle from '@cycle/xstream-run';
-import { makeQrCodeReaderDriver } from 'cycle-qrcode-reader';
+import { makeQrCodeReaderDriver } from '@leesiongchan/cycle-qrcode-reader';
 
 function main(sources) {
   // ...
@@ -64,4 +64,4 @@ function main({ DOM, QrCodeReader }) {
 
 ## Important
 
-It is important to note that **video must consists of both height and width** in order for the driver work properly as the driver is leveraging on the height and width to create a canvas and pass to the QR code reader to decode.
+It is important to note that **video must consists of both height and width** in order for the driver work properly as the driver is leveraging on the height and width to create a canvas and pass to the QR Code reader to decode.
