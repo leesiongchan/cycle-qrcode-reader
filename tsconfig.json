@@ -1,0 +1,21 @@
+{
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "outDir": "dist",
+    "sourceMap": true,
+    "target": "es5"
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "files": [
+    "src/index.ts",
+    "src/qrcode-reader.d.ts",
+    "typings/index.d.ts"
+  ]
+}
